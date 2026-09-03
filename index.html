@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evo Folders</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-wrap">
+      <div class="top-bar">
+        <div class="score-box">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-box">
+          <span>Carry</span>
+          <strong id="carry">0</strong>
+        </div>
+        <div class="score-box">
+          <span>Level</span>
+          <strong id="level">1</strong>
+        </div>
+        <div class="score-box">
+          <span>Best</span>
+          <strong id="best-score">0</strong>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="900" height="560" aria-label="Evo Folders game"></canvas>
+
+      <div id="overlay" class="overlay visible">
+        <div class="panel">
+          <h1>Evo Folders</h1>
+          <p>Collect the flying files, blocks, and meshes. Avoid the rocks.</p>
+          <button id="startButton">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
