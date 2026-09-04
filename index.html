@@ -8,6 +8,10 @@
   </head>
   <body>
     <div class="game-wrap">
+      <div class="menu-actions visible" id="menuActions">
+        <button id="topStartButton" type="button">Start</button>
+        <button id="topTutorialButton" class="secondary" type="button">How to play</button>
+      </div>
       <div class="top-bar">
         <div class="score-box">
           <span>Score</span>
@@ -17,6 +21,14 @@
           <span>Carry</span>
           <strong id="carry">0</strong>
         </div>
+        <div class="score-box points-box">
+          <span>Data</span>
+          <strong id="data-points">0</strong>
+        </div>
+        <div class="score-box folder-target-box">
+          <span>Folder</span>
+          <strong id="folder-target">0 / 20</strong>
+        </div>
         <div class="score-box">
           <span>Level</span>
           <strong id="level">1</strong>
@@ -25,15 +37,28 @@
           <span>Best</span>
           <strong id="best-score">0</strong>
         </div>
+        <div class="score-box">
+          <span>Lives</span>
+          <strong id="lives">3</strong>
+        </div>
       </div>
 
       <canvas id="gameCanvas" width="900" height="560" aria-label="Evo-Folders-in-Action game"></canvas>
 
+      <div class="touch-controls" aria-label="Game controls">
+        <button class="touch-button" data-control="left" aria-label="Move left">◀</button>
+        <button class="touch-button jump" data-control="jump" aria-label="Jump">Jump</button>
+        <button class="touch-button" data-control="right" aria-label="Move right">▶</button>
+      </div>
+
       <div id="overlay" class="overlay visible">
         <div class="panel">
           <h1>Evo-Folders-in-Action</h1>
-          <p>Collect the flying files, blocks, and meshes. Avoid the rocks.</p>
-          <button id="startButton">Start</button>
+          <p>Collect files, meshes, and blocks, then deliver them to Evo. Avoid rocks and bird droppings.</p>
+          <div class="button-row">
+            <button id="startButton">Start</button>
+            <button id="tutorialButton" class="secondary">How to play</button>
+          </div>
         </div>
       </div>
     </div>
